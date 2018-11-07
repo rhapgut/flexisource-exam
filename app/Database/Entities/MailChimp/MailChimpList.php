@@ -120,7 +120,7 @@ class MailChimpList extends MailChimpEntity
         return [
             'campaign_defaults' => 'required|array',
             'campaign_defaults.from_name' => 'required|string',
-            'campaign_defaults.from_email' => 'required|string',
+            'campaign_defaults.from_email' => 'required|email',
             'campaign_defaults.subject' => 'required|string',
             'campaign_defaults.language' => 'required|string',
             'contact' => 'required|array',

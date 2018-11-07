@@ -13,6 +13,7 @@
     "eoneopay/utils": "dev-master",
     "laravel/lumen-framework": "5.6.*",
     "laravel-doctrine/orm": "^1.4",
+    "laravel-doctrine/migrations": "^1.2",
     "pacely/mailchimp-apiv3": "^1.0",
     "vlucas/phpdotenv": "~2.2"
   },
