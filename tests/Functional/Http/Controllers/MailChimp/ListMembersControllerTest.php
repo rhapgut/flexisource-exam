@@ -75,9 +75,9 @@ class ListMembersControllerTest extends ListMemberTestCase
      */
     public function testRemoveListMemberNotFoundException(): void
     {
-        $this->delete(\sprintf('/mailchimp/lists/%s/members/invalid-subscriber-hash', $this->listId));
+        $this->delete(\sprintf('/mailchimp/lists/%s/members/invalid-list-member-id', $this->listId));
 
-        $this->assertListMemberNotFoundResponse('invalid-subscriber-hash');
+        $this->assertListMemberNotFoundResponse('invalid-list-member-id');
     }
 
     /**
@@ -105,9 +105,9 @@ class ListMembersControllerTest extends ListMemberTestCase
      */
     public function testShowListMemberNotFoundException(): void
     {
-        $this->get(\sprintf('/mailchimp/lists/%s/members/invalid-subscriber-hash', $this->listId));
+        $this->get(\sprintf('/mailchimp/lists/%s/members/invalid-list-member-id', $this->listId));
 
-        $this->assertListMemberNotFoundResponse('invalid-subscriber-hash');
+        $this->assertListMemberNotFoundResponse('invalid-list-member-id');
     }
 
     /**
@@ -139,9 +139,9 @@ class ListMembersControllerTest extends ListMemberTestCase
      */
     public function testUpdateListMemberNotFoundException(): void
     {
-        $this->put(\sprintf('/mailchimp/lists/%s/members/invalid-subscriber-hash', $this->listId));
+        $this->put(\sprintf('/mailchimp/lists/%s/members/invalid-list-member-id', $this->listId));
 
-        $this->assertListMemberNotFoundResponse('invalid-subscriber-hash');
+        $this->assertListMemberNotFoundResponse('invalid-list-member-id');
     }
 
     /**
